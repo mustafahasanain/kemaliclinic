@@ -1,49 +1,29 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import Image from "next/image"
-import { MessageSquare } from "lucide-react"
-import { motion } from "framer-motion"
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import { MessageSquare } from "lucide-react";
+import { motion } from "framer-motion";
 
 // Import Swiper and required modules
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Autoplay, Navigation, Pagination } from "swiper/modules"
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 // Import Swiper styles
-import "swiper/css"
-import "swiper/css/navigation"
-import "swiper/css/pagination"
-
-const slides = [
-  {
-    id: 1,
-    image: "/placeholder.svg?height=800&width=1920",
-    title: "رعاية طبية متميزة",
-    subtitle: "نقدم أفضل الخدمات الطبية بأيدي نخبة من الأطباء المتخصصين",
-  },
-  {
-    id: 2,
-    image: "/placeholder.svg?height=800&width=1920",
-    title: "تجربة علاجية فريدة",
-    subtitle: "نهتم بكل التفاصيل لضمان تجربة علاجية مريحة وناجحة",
-  },
-  {
-    id: 3,
-    image: "/placeholder.svg?height=800&width=1920",
-    title: "أحدث التقنيات الطبية",
-    subtitle: "نستخدم أحدث التقنيات والأجهزة الطبية لضمان أفضل النتائج",
-  },
-]
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { slides } from "@/constants";
 
 export default function HeroSlider() {
-  const [mounted, setMounted] = useState(false)
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
   if (!mounted) {
-    return null
+    return null;
   }
 
   return (
@@ -60,7 +40,13 @@ export default function HeroSlider() {
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
             <div className="relative w-full h-full">
-              <Image src={slide.image || "/placeholder.svg"} alt={slide.title} fill priority className="object-cover" />
+              <Image
+                src={slide.image || "/placeholder.svg"}
+                alt={slide.title}
+                fill
+                priority
+                className="object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-almost-black/80 to-transparent" />
               <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-12 lg:p-16 text-white">
                 <motion.div
@@ -91,19 +77,23 @@ export default function HeroSlider() {
                     transition={{ duration: 0.7, delay: 0.6 }}
                     className="flex flex-col sm:flex-row gap-4"
                   >
-                    <a
-                      href={`https://wa.me/+1234567890?text=${encodeURIComponent("مرحباً، أود حجز موعد في مركز السياحة الطبية")}`}
+                    {/* <a
+                      href={`https://wa.me/+1234567890?text=${encodeURIComponent(
+                        "مرحباً، أود حجز موعد في مركز السياحة الطبية"
+                      )}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex h-11 items-center justify-center rounded-md bg-primary px-8 text-base font-medium text-white shadow transition-colors hover:bg-dark-accent focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                     >
                       احجز الآن
-                    </a>
+                    </a> */}
                     <a
-                      href={`https://wa.me/+1234567890?text=${encodeURIComponent("مرحباً، أود الاستفسار عن خدمات مركز السياحة الطبية")}`}
+                      href={`https://wa.me/+1234567890?text=${encodeURIComponent(
+                        "مرحباً، أود الاستفسار عن خدمات مركز السياحة الطبية"
+                      )}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex h-11 items-center justify-center rounded-md border border-white bg-transparent px-8 text-base font-medium text-white shadow-sm transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                      className="inline-flex h-11 items-center justify-center rounded-md border border-primary bg-transparent px-8 text-base font-bold text-primary shadow-sm transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                     >
                       <MessageSquare className="ml-2 h-5 w-5" />
                       تواصل معنا
@@ -116,5 +106,5 @@ export default function HeroSlider() {
         ))}
       </Swiper>
     </section>
-  )
+  );
 }
