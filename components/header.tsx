@@ -97,7 +97,7 @@ export default function Header() {
             اتصل بنا
           </Link>
           <a
-            href={`https://wa.me/+1234567890?text=${encodeURIComponent(
+            href={`https://wa.me/+905352785119?text=${encodeURIComponent(
               "مرحباً، أود حجز موعد في مركز السياحة الطبية"
             )}`}
             target="_blank"
@@ -171,7 +171,7 @@ export default function Header() {
             اتصل بنا
           </Link>
           <a
-            href={`https://wa.me/+1234567890?text=${encodeURIComponent(
+            href={`https://wa.me/+905352785119?text=${encodeURIComponent(
               "مرحباً، أود حجز موعد في مركز السياحة الطبية"
             )}`}
             target="_blank"

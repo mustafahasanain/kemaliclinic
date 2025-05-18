@@ -35,7 +35,7 @@ export default function AboutUs() {
               متكاملة وآمنة تلبي تطلعاتك الجمالية والصحية بكل ثقة وتميّز
             </p>
             <a
-              href={`https://wa.me/+1234567890?text=${encodeURIComponent(
+              href={`https://wa.me/+905352785119?text=${encodeURIComponent(
                 "مرحباً، أود معرفة المزيد عن مركز السياحة الطبية"
               )}`}
               target="_blank"

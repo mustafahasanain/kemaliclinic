@@ -59,7 +59,7 @@ const services = [
   },
   {
     id: 2,
-    title: "شد الوجه مع الذقن والرقبة",
+    title: "شد الوجه والرقبة",
     description:
       "تقنيات متطورة لشد الوجه والذقن والرقبة للحصول على مظهر أكثر شباباً",
     image: "/images/services/face-lift.png",

@@ -77,23 +77,13 @@ export default function HeroSlider() {
                     transition={{ duration: 0.7, delay: 0.6 }}
                     className="flex flex-col sm:flex-row gap-4"
                   >
-                    {/* <a
-                      href={`https://wa.me/+1234567890?text=${encodeURIComponent(
-                        "مرحباً، أود حجز موعد في مركز السياحة الطبية"
-                      )}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex h-11 items-center justify-center rounded-md bg-primary px-8 text-base font-medium text-white shadow transition-colors hover:bg-dark-accent focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                    >
-                      احجز الآن
-                    </a> */}
                     <a
-                      href={`https://wa.me/+1234567890?text=${encodeURIComponent(
+                      href={`https://wa.me/+905352785119?text=${encodeURIComponent(
                         "مرحباً، أود الاستفسار عن خدمات مركز السياحة الطبية"
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex h-11 items-center justify-center rounded-md border border-primary bg-transparent px-8 text-base font-bold text-primary shadow-sm transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                      className="inline-flex h-11 items-center justify-center rounded-md border border-white bg-primary px-8 text-base font-bold text-white shadow-sm transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                     >
                       <MessageSquare className="ml-2 h-5 w-5" />
                       تواصل معنا

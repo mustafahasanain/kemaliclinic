@@ -1,39 +1,41 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useRef, useState } from "react"
-import { motion, useInView } from "framer-motion"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import { Phone, Mail, MapPin } from "lucide-react"
+import { useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function ContactUs() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   const [formState, setFormState] = useState({
     name: "",
     phone: "",
     email: "",
     message: "",
-  })
+  });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormState((prev) => ({ ...prev, [name]: value }))
-  }
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormState((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Form submission logic would go here
-    console.log("Form submitted:", formState)
+    console.log("Form submitted:", formState);
 
     // Open WhatsApp with form data
     const message = encodeURIComponent(
-      `الاسم: ${formState.name}\nرقم الهاتف: ${formState.phone}\nالبريد الإلكتروني: ${formState.email}\nالرسالة: ${formState.message}`,
-    )
-    window.open(`https://wa.me/+1234567890?text=${message}`, "_blank")
+      `الاسم: ${formState.name}\nرقم الهاتف: ${formState.phone}\nالبريد الإلكتروني: ${formState.email}\nالرسالة: ${formState.message}`
+    );
+    window.open(`https://wa.me/+905352785119?text=${message}`, "_blank");
 
     // Reset form
     setFormState({
@@ -41,11 +43,11 @@ export default function ContactUs() {
       phone: "",
       email: "",
       message: "",
-    })
+    });
 
     // Show success message
-    alert("تم إرسال رسالتك بنجاح. سنتواصل معك قريباً.")
-  }
+    alert("تم إرسال رسالتك بنجاح. سنتواصل معك قريباً.");
+  };
 
   return (
     <section id="contact" className="py-16" ref={ref}>
@@ -55,9 +57,12 @@ export default function ContactUs() {
         transition={{ duration: 0.5 }}
         className="text-center mb-12"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">اتصل بنا</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+          اتصل بنا
+        </h2>
         <p className="text-text-gray text-lg max-w-2xl mx-auto">
-          نحن هنا للإجابة على جميع استفساراتك. يمكنك التواصل معنا من خلال النموذج أدناه أو عبر معلومات الاتصال المتوفرة
+          نحن هنا للإجابة على جميع استفساراتك. يمكنك التواصل معنا من خلال
+          النموذج أدناه أو عبر معلومات الاتصال المتوفرة
         </p>
       </motion.div>
 
@@ -139,7 +144,7 @@ export default function ContactUs() {
                 <Phone className="h-6 w-6 text-primary ml-4 mt-1" />
                 <div>
                   <h3 className="font-bold text-primary text-lg">اتصل بنا</h3>
-                  <p className="text-text-gray">+123 456 7890</p>
+                  <p className="text-text-gray">19 51 278 535 90+</p>
                 </div>
               </div>
 
@@ -147,7 +152,7 @@ export default function ContactUs() {
                 <Mail className="h-6 w-6 text-primary ml-4 mt-1" />
                 <div>
                   <h3 className="font-bold text-primary text-lg">راسلنا</h3>
-                  <p className="text-text-gray">info@medicaltourism.com</p>
+                  <p className="text-text-gray">kemaliclinic@gmail.com</p>
                 </div>
               </div>
 
@@ -155,20 +160,27 @@ export default function ContactUs() {
                 <MapPin className="h-6 w-6 text-primary ml-4 mt-1" />
                 <div>
                   <h3 className="font-bold text-primary text-lg">موقعنا</h3>
-                  <p className="text-text-gray">شارع الرئيسي، المدينة الطبية، 12345</p>
+                  <p className="text-text-gray">
+                    Atakent, 4. Cd. No:36, 34307 Küçükçekmece/İstanbul
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="h-[300px] rounded-lg overflow-hidden shadow-md">
-            {/* Google Maps placeholder - would be replaced with actual Google Maps embed */}
-            <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-              <p className="text-text-gray">خريطة جوجل ستظهر هنا</p>
-            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.468959164729!2d28.76869227681943!3d41.036872671346565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa4214c8acbad%3A0xb3792a310c6132e7!2zQXRha2VudCwgNC4gQ2QuIE5vOjM2LCAzNDMwNyBLw7zDp8O8a8OnZWttZWNlL8Swc3RhbmJ1bCwgVMO8cmtpeWU!5e0!3m2!1sen!2siq!4v1747506243781!5m2!1sen!2siq"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Google Maps Location"
+            ></iframe>
           </div>
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

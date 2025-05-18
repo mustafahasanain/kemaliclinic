@@ -19,7 +19,7 @@ export default function OffersSection() {
   return (
     <section
       id="offers"
-      className="py-16 bg-gradient-to-b from-white to-gray-50"
+      className="py-16 bg-gradient-to-b from-white to-gray-50 rounded-xl"
       ref={ref}
     >
       <motion.div
@@ -69,7 +69,7 @@ export default function OffersSection() {
                 </CardContent>
                 <CardFooter>
                   <a
-                    href={`https://wa.me/+1234567890?text=${encodeURIComponent(
+                    href={`https://wa.me/+905352785119?text=${encodeURIComponent(
                       offer.whatsappMessage
                     )}`}
                     target="_blank"
