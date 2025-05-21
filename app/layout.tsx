@@ -2,9 +2,9 @@ import type React from "react";
 import "@/app/globals.css";
 import type { Metadata } from "next";
 import { Cairo } from "next/font/google";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 // Use Cairo font which supports Arabic characters well
 const cairo = Cairo({

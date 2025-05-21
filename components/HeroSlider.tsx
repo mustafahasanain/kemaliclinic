@@ -8,8 +8,7 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-// This would need to be updated in your constants.js file
-// to include responsive image paths for each slide
+
 import { slides } from "@/constants";
 
 export default function HeroSlider() {

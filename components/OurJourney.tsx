@@ -46,7 +46,7 @@ export default function OurJourney() {
         >
           <div className="relative h-[400px] w-full rounded-lg overflow-hidden shadow-lg">
             <Image
-              src="images/our-journey.jpg"
+              src="images/journey/our-journey.jpg"
               alt="فريق المركز الطبي"
               fill
               className="object-cover"

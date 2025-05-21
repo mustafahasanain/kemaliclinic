@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import HeroSlider from "@/components/hero-slider";
-import OffersSection from "@/components/offers-section";
-import ServicesSlider from "@/components/services-slider";
-import AboutUs from "@/components/about-us";
-import OurApproach from "@/components/our-approach";
-import ContactUs from "@/components/contact-us";
-import OurJourney from "@/components/our-journey";
+import {
+  HeroSlider,
+  OffersSection,
+  ServicesSlider,
+  AboutUs,
+  OurApproach,
+  ContactUs,
+  OurJourney,
+} from "@/components/index";
 
 export const metadata: Metadata = {
   title: "مركز السياحة الطبية | الرعاية الطبية المتميزة",
