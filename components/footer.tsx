@@ -54,10 +54,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-300">
-          <p>
-            © {new Date().getFullYear()} مركز السياحة الطبية. جميع الحقوق
-            محفوظة.
-          </p>
+          <p>© {new Date().getFullYear()} Kemali Clinic. جميع الحقوق محفوظة.</p>
         </div>
       </div>
     </footer>

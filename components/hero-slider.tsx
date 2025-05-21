@@ -1,18 +1,15 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { MessageSquare } from "lucide-react";
 import { motion } from "framer-motion";
-
-// Import Swiper and required modules
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+// This would need to be updated in your constants.js file
+// to include responsive image paths for each slide
 import { slides } from "@/constants";
 
 export default function HeroSlider() {
@@ -22,12 +19,10 @@ export default function HeroSlider() {
     setMounted(true);
   }, []);
 
-  if (!mounted) {
-    return null;
-  }
+  if (!mounted) return null;
 
   return (
-    <section className="relative w-full h-[70vh] md:h-[80vh]">
+    <section className="relative w-full h-[700px] sm:h-[700px] md:h-[800px] lg:h-[800px]">
       <Swiper
         modules={[Autoplay, Navigation, Pagination]}
         slidesPerView={1}
@@ -39,27 +34,49 @@ export default function HeroSlider() {
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <div className="relative w-full h-full">
-              <Image
-                src={slide.image || "/placeholder.svg"}
-                alt={slide.title}
-                fill
-                priority
-                className="object-cover"
-              />
+            <div className="relative w-full h-[700px] sm:h-[700px] md:h-[800px] lg:h-[800px]">
+              {/* Responsive image handling with different images per device */}
+              <div className="relative w-full h-full">
+                <picture>
+                  {/* Mobile image (displayed on screens under 640px) */}
+                  {slide.mobileImage && (
+                    <source
+                      media="(max-width: 639px)"
+                      srcSet={slide.mobileImage}
+                    />
+                  )}
+                  {/* Tablet image (displayed on screens 640px-1023px) */}
+                  {slide.tabletImage && (
+                    <source
+                      media="(min-width: 640px) and (max-width: 1023px)"
+                      srcSet={slide.tabletImage}
+                    />
+                  )}
+                  {/* Desktop image (displayed on screens 1024px and above) */}
+                  <Image
+                    src={slide.image || "/placeholder.svg"}
+                    alt={slide.title}
+                    fill
+                    priority
+                    sizes="(max-width: 639px) 100vw, (max-width: 1023px) 100vw, 100vw"
+                    quality={90}
+                    className="object-cover w-full h-full"
+                  />
+                </picture>
+              </div>
               <div className="absolute inset-0 bg-gradient-to-t from-almost-black/80 to-transparent" />
-              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-12 lg:p-16 text-white">
+              <div className="absolute inset-0 flex flex-col justify-end p-4 sm:p-6 md:p-12 lg:p-16 text-white">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7 }}
-                  className="max-w-3xl mb-12"
+                  className="max-w-3xl mb-8 md:mb-12"
                 >
                   <motion.h1
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.7, delay: 0.2 }}
-                    className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
+                    className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4"
                   >
                     {slide.title}
                   </motion.h1>
@@ -67,7 +84,7 @@ export default function HeroSlider() {
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.7, delay: 0.4 }}
-                    className="text-lg md:text-xl mb-6 text-gray-100"
+                    className="text-base sm:text-lg md:text-xl mb-4 sm:mb-6 text-gray-100"
                   >
                     {slide.subtitle}
                   </motion.p>

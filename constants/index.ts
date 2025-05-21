@@ -1,22 +1,32 @@
 const slides = [
   {
     id: 1,
-    image: "/placeholder.svg?height=800&width=1920",
+    image: "/images/hero/desktop/medical-care.jpg",
     title: "رعاية طبية متميزة",
     subtitle: "نقدم أفضل الخدمات الطبية بأيدي نخبة من الأطباء المتخصصين",
+    tabletImage: "/images/hero/tablet/medical-care.jpg",
+    mobileImage: "/images/hero/mobile/medical-care.jpg",
   },
   {
     id: 2,
-    image: "/placeholder.svg?height=800&width=1920",
-    title: "تجربة علاجية فريدة",
-    subtitle: "نهتم بكل التفاصيل لضمان تجربة علاجية مريحة وناجحة",
+    image: "/images/hero/desktop/experience.jpg",
+    title: "الابتكار هو بداية الراحة",
+    subtitle: "نوفر لك بيئة علاجية تجمع بين التكنولوجيا والاهتمام الحقيقي",
+    tabletImage: "/images/hero/tablet/experience.jpg",
+    mobileImage: "/images/hero/mobile/experience.jpg",
   },
   {
     id: 3,
-    image: "/placeholder.svg?height=800&width=1920",
+    image: "/images/hero/desktop/technologies.jpg",
     title: "أحدث التقنيات الطبية",
     subtitle: "نستخدم أحدث التقنيات والأجهزة الطبية لضمان أفضل النتائج",
+    tabletImage: "/images/hero/tablet/technologies.jpg",
+    mobileImage: "/images/hero/mobile/technologies.jpg",
   },
+
+  // Desktop image size: (1920x800px)
+  // Tablet image size: (1200×600px)
+  // Mobile image size: (430×700px)
 ];
 
 const offers = [
@@ -25,8 +35,7 @@ const offers = [
     title: "عرض شفط 360 + شد البطن + تعبئة المؤخرة",
     description:
       "احصل على باقة تجميل كاملة تشمل شفط الدهون 360 درجة، شد البطن، وتعبئة المؤخرة بأسعار مميزة.",
-    image:
-      "/placeholder.svg?height=400&width=600&text=عرض+شفط+360+%2B+شد+البطن+%2B+تعبئة+المؤخرة",
+    image: "/images/offers/body-offer.jpg",
     whatsappMessage:
       "مرحباً، أود الاستفسار عن عرض شفط 360 + شد البطن + تعبئة المؤخرة",
   },
@@ -35,7 +44,7 @@ const offers = [
     title: "عرض ابتسامة هوليوود",
     description:
       "ابتسامة هوليوود المثالية بأسعار تنافسية وتشمل تصميم الابتسامة وعدسات الأسنان.",
-    image: "/placeholder.svg?height=400&width=600&text=عرض+ابتسامة+هوليوود",
+    image: "/images/offers/teeth-offer.jpg",
     whatsappMessage: "مرحباً، أود الاستفسار عن عرض ابتسامة هوليوود",
   },
   {
@@ -43,7 +52,7 @@ const offers = [
     title: "عرض تجميل الأنف",
     description:
       "احصل على خصم خاص على عملية تجميل الأنف مع أفضل الجراحين وخدمات عالية الجودة.",
-    image: "/placeholder.svg?height=400&width=600&text=عرض+تجميل+الأنف",
+    image: "/images/offers/noise-offer.jpg",
     whatsappMessage: "مرحباً، أود الاستفسار عن عرض تجميل الأنف",
   },
 ];

@@ -161,7 +161,8 @@ export default function ContactUs() {
                 <div>
                   <h3 className="font-bold text-primary text-lg">موقعنا</h3>
                   <p className="text-text-gray">
-                    Atakent, 4. Cd. No:36, 34307 Küçükçekmece/İstanbul
+                    Ziya Gökalp, Süleyman Demirel Blv No:9, 34490
+                    Başakşehir/İstanbul
                   </p>
                 </div>
               </div>
