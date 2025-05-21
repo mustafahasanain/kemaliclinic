@@ -9,15 +9,18 @@ import {
   OurJourney,
 } from "@/components/index";
 
-export const metadata: Metadata = {
-  title: "مركز السياحة الطبية | الرعاية الطبية المتميزة",
+export const metadata = {
+  title: "Kemali Clinic",
   description:
     "مركز متخصص في السياحة الطبية يقدم خدمات طبية متميزة بأيدي نخبة من الأطباء المتخصصين",
+  icons: {
+    icon: "/images/favicon.ico",
+  },
   openGraph: {
-    title: "مركز السياحة الطبية | الرعاية الطبية المتميزة",
+    title: "Kemali Clinic",
     description:
       "مركز متخصص في السياحة الطبية يقدم خدمات طبية متميزة بأيدي نخبة من الأطباء المتخصصين",
-    images: ["/images/clinic-og.jpg"],
+    images: ["/images/logo.png"],
   },
 };
 
