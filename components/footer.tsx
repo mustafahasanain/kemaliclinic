@@ -24,7 +24,7 @@ export default function Footer() {
             <div className="flex justify-center space-x-4 space-x-reverse mb-4">
               {/* Snapchat SVG */}
               <Link
-                href="https://snapchat.com/t/lYSWa3H3"
+                href="https://snapchat.com/t/YxntN4rL"
                 className="text-gray-300 hover:text-white"
                 target="_blank"
               >
