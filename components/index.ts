@@ -5,3 +5,4 @@ export { default as OurApproach } from "./OurApproach";
 export { default as ContactUs } from "./ContactUs";
 export { default as OurJourney } from "./OurJourney";
 export { default as AboutUs } from "./AboutUs";
+export { default as ScrollToTopButton } from "./ScrollToTopButton";

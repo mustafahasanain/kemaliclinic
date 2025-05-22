@@ -7,6 +7,7 @@ import {
   OurApproach,
   ContactUs,
   OurJourney,
+  ScrollToTopButton,
 } from "@/components/index";
 
 export const metadata = {
@@ -34,6 +35,7 @@ export default function Home() {
       <HeroSlider />
       <div className="container mx-auto px-4 py-12 md:py-16 lg:py-20">
         <OurJourney />
+        <ScrollToTopButton />
         <OffersSection />
         <OurServices />
         <AboutUs />
