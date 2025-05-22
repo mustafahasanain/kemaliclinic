@@ -43,14 +43,15 @@ export default function Header() {
         "sticky top-0 z-50 w-full transition-all duration-300",
         scrolled ? "bg-white shadow-md" : "bg-white/90 backdrop-blur-sm"
       )}
+      dir="ltr"
     >
       <div className="container flex h-16 items-center justify-between px-4">
-        <div className="flex items-center">
+        <div className="flex items-start">
           <Link href="/" className="flex items-center">
-            <div className="relative h-10 w-40">
+            <div className="relative h-10 w-32 sm:h-16 sm:w-56 lg:h-12 lg:w-64">
               <Image
-                src="/images/logo.png"
-                alt="مركز السياحة الطبية"
+                src="/images/ck-logo.png"
+                alt="Kemali Clinic Logo"
                 fill
                 className="object-contain"
                 priority
@@ -60,7 +61,7 @@ export default function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-1 space-x-reverse">
+        <nav className="hidden md:flex flex-row-reverse items-center space-x-1 space-x-reverse">
           <Link
             href="#offers"
             className="px-4 py-2 text-almost-black hover:text-primary transition-colors"
@@ -73,7 +74,7 @@ export default function Header() {
             className="px-4 py-2 text-almost-black hover:text-primary transition-colors"
             onClick={handleLinkClick}
           >
-            خدماتنا
+            الخدمات
           </Link>
           <Link
             href="#about"
@@ -121,7 +122,7 @@ export default function Header() {
       {/* Mobile Navigation */}
       <div
         className={cn(
-          "fixed inset-0 z-40 bg-white transform transition-transform duration-300 ease-in-out md:hidden",
+          "fixed inset-0 z-40 bg-white transform transition-transform duration-700 ease-in-out md:hidden",
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
@@ -137,35 +138,35 @@ export default function Header() {
         <nav className="flex flex-col items-center space-y-4 p-4 bg-white">
           <Link
             href="#offers"
-            className="w-full py-3 text-center text-lg font-medium text-almost-black hover:text-primary"
+            className="w-full py-3 text-center text-lg font-medium text-almost-black hover:text-primary transition-colors duration-300"
             onClick={handleLinkClick}
           >
             العروض
           </Link>
           <Link
             href="#services"
-            className="w-full py-3 text-center text-lg font-medium text-almost-black hover:text-primary"
+            className="w-full py-3 text-center text-lg font-medium text-almost-black hover:text-primary transition-colors duration-300"
             onClick={handleLinkClick}
           >
             خدماتنا
           </Link>
           <Link
             href="#about"
-            className="w-full py-3 text-center text-lg font-medium text-almost-black hover:text-primary"
+            className="w-full py-3 text-center text-lg font-medium text-almost-black hover:text-primary transition-colors duration-300"
             onClick={handleLinkClick}
           >
             من نحن
           </Link>
           <Link
             href="#approach"
-            className="w-full py-3 text-center text-lg font-medium text-almost-black hover:text-primary"
+            className="w-full py-3 text-center text-lg font-medium text-almost-black hover:text-primary transition-colors duration-300"
             onClick={handleLinkClick}
           >
             نهجنا
           </Link>
           <Link
             href="#contact"
-            className="w-full py-3 text-center text-lg font-medium text-almost-black hover:text-primary"
+            className="w-full py-3 text-center text-lg font-medium text-almost-black hover:text-primary transition-colors duration-300"
             onClick={handleLinkClick}
           >
             اتصل بنا
@@ -176,7 +177,7 @@ export default function Header() {
             )}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full inline-flex items-center justify-center whitespace-nowrap rounded-md bg-primary px-4 py-2 text-sm font-medium text-white shadow transition-colors hover:bg-dark-accent focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+            className="w-full inline-flex items-center justify-center whitespace-nowrap rounded-md bg-primary px-4 py-2 text-sm font-medium text-white shadow transition-colors duration-300 hover:bg-dark-accent focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
             onClick={handleLinkClick}
           >
             احجز الآن

@@ -6,15 +6,16 @@ import { motion, useInView } from "framer-motion";
 
 export default function AboutUs() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <section id="about" className="py-16" ref={ref}>
+    <section id="about" className="py-16 scroll-mt-20" ref={ref}>
       <div className="grid md:grid-cols-2 gap-10 items-center">
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-          transition={{ duration: 0.5 }}
+          ref={ref}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className="order-2 md:order-1"
         >
           <div className="space-y-6">
@@ -35,7 +36,7 @@ export default function AboutUs() {
               متكاملة وآمنة تلبي تطلعاتك الجمالية والصحية بكل ثقة وتميّز
             </p>
             <a
-              href={`https://wa.me/+905352785119?text=${encodeURIComponent(
+              href={`https://api.whatsapp.com/send?phone=905352785119&text=${encodeURIComponent(
                 "مرحباً، أود معرفة المزيد عن مركز السياحة الطبية"
               )}`}
               target="_blank"
@@ -48,14 +49,14 @@ export default function AboutUs() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="order-1 md:order-2"
         >
           <div className="relative h-[400px] w-full rounded-lg overflow-hidden shadow-lg">
             <Image
-              src="images/about/about-us.jpg"
+              src="images/about-us.jpg"
               alt="فريق المركز الطبي"
               fill
               className="object-cover"

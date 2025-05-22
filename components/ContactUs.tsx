@@ -11,7 +11,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function ContactUs() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
   const [formState, setFormState] = useState({
     name: "",
     phone: "",
@@ -50,7 +50,7 @@ export default function ContactUs() {
   };
 
   return (
-    <section id="contact" className="py-16" ref={ref}>
+    <section id="contact" className="py-16 scroll-mt-20" ref={ref}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -68,8 +68,8 @@ export default function ContactUs() {
 
       <div className="grid md:grid-cols-2 gap-10">
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -133,8 +133,8 @@ export default function ContactUs() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           className="space-y-8"
         >
@@ -171,7 +171,7 @@ export default function ContactUs() {
 
           <div className="h-[300px] rounded-lg overflow-hidden shadow-md">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.468959164729!2d28.76869227681943!3d41.036872671346565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa4214c8acbad%3A0xb3792a310c6132e7!2zQXRha2VudCwgNC4gQ2QuIE5vOjM2LCAzNDMwNyBLw7zDp8O8a8OnZWttZWNlL8Swc3RhbmJ1bCwgVMO8cmtpeWU!5e0!3m2!1sen!2siq!4v1747506243781!5m2!1sen!2siq"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5059.239070725506!2d28.804986863109246!3d41.06371238769284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa59bfdeea559%3A0xd339ab124ca18c1b!2zWml5YSBHw7ZrYWxwLCBTw7xsZXltYW4gRGVtaXJlbCBCbHYgOS0xMSwgMzQ0OTAgQmHFn2FrxZ9laGlyL8Swc3RhbmJ1bCwgVMO8cmtpeWU!5e0!3m2!1sen!2siq!4v1747856210449!5m2!1sen!2siq"
               width="100%"
               height="100%"
               style={{ border: 0 }}

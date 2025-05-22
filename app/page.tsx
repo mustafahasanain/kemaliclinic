@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import {
   HeroSlider,
   OffersSection,
-  ServicesSlider,
+  OurServices,
   AboutUs,
   OurApproach,
   ContactUs,
@@ -20,7 +20,7 @@ export const metadata = {
     title: "Kemali Clinic",
     description:
       "مركز متخصص في السياحة الطبية يقدم خدمات طبية متميزة بأيدي نخبة من الأطباء المتخصصين",
-    images: ["/images/logo.png"],
+    images: ["/images/favicon.ico"],
   },
 };
 
@@ -35,7 +35,7 @@ export default function Home() {
       <div className="container mx-auto px-4 py-12 md:py-16 lg:py-20">
         <OurJourney />
         <OffersSection />
-        <ServicesSlider />
+        <OurServices />
         <AboutUs />
         <OurApproach />
         <ContactUs />
