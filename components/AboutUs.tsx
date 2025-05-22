@@ -56,7 +56,7 @@ export default function AboutUs() {
         >
           <div className="relative h-[400px] w-full rounded-lg overflow-hidden shadow-lg">
             <Image
-              src="images/about-us.jpg"
+              src="images/about-us.webp"
               alt="فريق المركز الطبي"
               fill
               className="object-cover"

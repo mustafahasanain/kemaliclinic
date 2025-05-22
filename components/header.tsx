@@ -50,7 +50,7 @@ export default function Header() {
           <Link href="/" className="flex items-center">
             <div className="relative h-10 w-32 sm:h-16 sm:w-56 lg:h-12 lg:w-64">
               <Image
-                src="/images/ck-logo.png"
+                src="/images/ck-logo.webp"
                 alt="Kemali Clinic Logo"
                 fill
                 className="object-contain"

@@ -57,7 +57,7 @@ function ServiceCard({ service, index }: { service: any; index: number }) {
         {/* Overlay Logo */}
         <div className="absolute inset-0 opacity-10 pointer-events-none z-0">
           <Image
-            src="/images/background-overlay.png"
+            src="/images/background-overlay.webp"
             alt="Background Logo"
             fill
             className="object-contain object-center"
